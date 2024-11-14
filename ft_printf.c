@@ -5,24 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 16:11:45 by ivan              #+#    #+#             */
-/*   Updated: 2024/11/14 10:37:39 by igilbert         ###   ########.fr       */
+/*   Created: 2024/11/14 11:28:06 by igilbert          #+#    #+#             */
+/*   Updated: 2024/11/14 11:30:10 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 16:11:47 by igilbert          #+#    #+#             */
-/*   Updated: 2024/11/12 19:52:45 by igilbert         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "../libft/libft.h"
 #include "ft_printf.h"
 
 int	in_charset(char c)
@@ -90,6 +77,15 @@ int	ft_printf(char const *str, ...)
 		else
 			len += ft_putchar(str[i]);
 		i++;
-		return (len);
 	}
+	return (len);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	printf("Hello %s, %d, %c, %p, %i, %u, %x, %X, %%, %c, %s\n", "world", 42, 'a', 0, 42, 42, 42, 42);
+	ft_printf("Hello %s, %d, %c, %p, %i, %u, %x, %X, %%, %c, %s\n", "world", 42, 'a', 0, 42, 42, 42, 42);
+	return (0);
 }

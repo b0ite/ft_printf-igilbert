@@ -6,13 +6,13 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:24:54 by igilbert          #+#    #+#             */
-/*   Updated: 2024/11/14 10:31:05 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/14 11:44:23 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-ft_putnbr_base(unsigned long long nb, char *base)
+int	ft_putnbr_base(long long nb, char *base)
 {
 	int	len;
 
@@ -32,8 +32,8 @@ int	process_p(va_list args)
 	unsigned long long	nb;
 	int					len;
 
-	nb = va_arg(args, unsigned long long);
-	len += ft_putstr("0x");
+	nb = va_arg(args, long);
+	len = ft_putstr("0x");
 	len += ft_putnbr_base(nb, "0123456789abcdef");
 	return (len);
 }
