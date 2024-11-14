@@ -12,7 +12,7 @@ OBJ = ${SRC:.c=.o}
 
 FLAGS = -Wall -Werror -Wextra
 
-all = $(NAME)
+all : $(NAME)
 	@true
 
 $(NAME) :
