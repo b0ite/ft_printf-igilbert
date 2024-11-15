@@ -5,6 +5,7 @@ SRC = 	ft_printf.c \
 		process_xcapx.c \
 		process_p.c \
 		ft_tools.c \
+		process_d.c
 
 NAME = libftprintf.a
 

@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 19:53:18 by igilbert          #+#    #+#             */
-/*   Updated: 2024/11/14 10:38:07 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:47:08 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_putstr(char *str)
 	return (i);
 }
 
-int	ft_putnbr(long long nb)
+int	ft_putnbr(long nb)
 {
 	int		len;
 
@@ -39,7 +39,7 @@ int	ft_putnbr(long long nb)
 	if (nb < 0)
 	{
 		len += ft_putchar('-');
-		nb = -nb;
+		nb *= -1;
 	}
 	if (nb >= 10)
 	{
