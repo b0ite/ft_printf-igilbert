@@ -33,6 +33,8 @@ int	process_p(va_list args)
 	int					len;
 
 	nb = va_arg(args, unsigned long long);
+	if (!nb)
+		return (ft_putstr("(nil)"));
 	len = ft_putstr("0x");
 	len += ft_putnbr_base(nb, "0123456789abcdef");
 	return (len);

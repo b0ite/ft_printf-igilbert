@@ -81,66 +81,15 @@ int	ft_printf(char const *str, ...)
 	return (len);
 }
 
+/*
 #include <stdio.h>
 #include <limits.h>
 
 int main(void)
 {
-	int len1, len2;
-
-	// Test characters
-	printf("\n----- Testing characters -----\n");
-	len1 = printf("Original: %c %c %c\n", 'a', 'b', 'c');
-	len2 = ft_printf("Custom  : %c %c %c\n", 'a', 'b', 'c');
-	printf("Lengths: %d vs %d\n", len1, len2);
-
-	// Test strings
-	printf("\n----- Testing strings -----\n");
-	len1 = printf("Original: %s %s\n", "Hello", "World");
-	len2 = ft_printf("Custom  : %s %s\n", "Hello", "World");
-	printf("Lengths: %d vs %d\n", len1, len2);
-	
-	// Test NULL string
-	len1 = printf("Original NULL: %s\n", NULL);
-	len2 = ft_printf("Custom NULL : %s\n", NULL);
-	printf("Lengths: %d vs %d\n", len1, len2);
-
-	// Test numbers
-	printf("\n----- Testing numbers -----\n");
-	len1 = printf("Original: %d %i %u\n", 42, -9, 4242);
-	len2 = ft_printf("Custom  : %d %i %u\n", 42, -9, 4242);
-	printf("Lengths: %d vs %d\n", len1, len2);
-
-	// Test hexadecimal
-	printf("\n----- Testing hexadecimal -----\n");
-	len1 = printf("Original: %x %X\n", 255, 255);
-	len2 = ft_printf("Custom  : %x %X\n", 255, 255);
-	printf("Lengths: %d vs %d\n", len1, len2);
-
-	// Test pointers
-	int num = 42;
-	printf("\n----- Testing pointers -----\n");
-	len1 = printf("Original: %p\n", &num);
-	len2 = ft_printf("Custom  : %p\n", &num);
-	printf("Lengths: %d vs %d\n", len1, len2);
-
-	// Test edge cases
-	printf("\n----- Testing edge cases -----\n");
-	len1 = printf("Original: %d %u\n", INT_MAX, UINT_MAX);
-	len2 = ft_printf("Custom  : %d %u\n", INT_MAX, UINT_MAX);
-	printf("Lengths: %d vs %d\n", len1, len2);
-
-	// Test percentage
-	printf("\n----- Testing percentage -----\n");
-	len1 = printf("Original: 100%%\n");
-	len2 = ft_printf("Custom  : 100%%\n");
-	printf("Lengths: %d vs %d\n", len1, len2);
-
-	// Test mixed format
-	printf("\n----- Testing mixed format -----\n");
-	len1 = printf("Original: %s has %d %s and %c %x\n", "User", 3, "apples", '!', 123);
-	len2 = ft_printf("Custom  : %s has %d %s and %c %x\n", "User", 3, "apples", '!', 123);
-	printf("Lengths: %d vs %d\n", len1, len2);
-
+	printf("Nom: %s, Âge: %d, Initiale: %c, Code Postal: %u, ID: %i, Adresse: %p, Hex: %x, Hex Maj: %X, Pourcentage: %%\n", 
+           "Jean Dupont", 30, 'J', 75001, -42, (void*)0x7ffee4b182a0, 255, 255, 0);
+	ft_printf("Nom: %s, Âge: %d, Initiale: %c, Code Postal: %u, ID: %i, Adresse: %p, Hex: %x, Hex Maj: %X, Pourcentage: %%\n", 
+           "Jean Dupont", 30, 'J', 75001, -42, (void*)0x7ffee4b182a0, 255, 255, 0);
 	return (0);
-}
+}*/

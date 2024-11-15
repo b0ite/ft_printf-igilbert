@@ -26,7 +26,7 @@ int	process_i(va_list args);
 int	process_u(va_list args);
 int	process_x(va_list args);
 int	process_capx(va_list args);
-int	ft_putnbr(long nb);
+int	ft_putnbr(int nb);
 int	ft_putstr(char *str);
 int	ft_putnbr_base(unsigned long long nb, char *base);
 int	in_charset(char c);

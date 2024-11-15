@@ -31,11 +31,13 @@ int	ft_putstr(char *str)
 	return (i);
 }
 
-int	ft_putnbr(long nb)
+int	ft_putnbr(int n)
 {
 	int		len;
+	long	nb;
 
 	len = 0;
+	nb = n;
 	if (nb < 0)
 	{
 		len += ft_putchar('-');

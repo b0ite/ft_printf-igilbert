@@ -14,10 +14,5 @@
 
 int	process_d(va_list args)
 {
-	long	nb;
-	int		len;
-
-	nb = (long)va_arg(args, long);
-	len = ft_putnbr(nb);
-	return (len);
+	return (ft_putnbr((int)va_arg(args, int)));
 }
