@@ -28,7 +28,4 @@ fclean : clean
 
 re : fclean all
 
-dev :
-	make fclean;git add .; git commit -m 'auto update';git push ; cd ../ft_printf; paco ; make fclean
-
-.PHONY : all clean fclean re dev
+.PHONY : all clean fclean re
