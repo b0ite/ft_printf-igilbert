@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 11:28:06 by igilbert          #+#    #+#             */
-/*   Updated: 2024/11/14 14:49:20 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/16 01:44:30 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,16 +80,3 @@ int	ft_printf(char const *str, ...)
 	}
 	return (len);
 }
-
-/*
-#include <stdio.h>
-#include <limits.h>
-
-int main(void)
-{
-	printf("Nom: %s, Âge: %d, Initiale: %c, Code Postal: %u, ID: %i, Adresse: %p, Hex: %x, Hex Maj: %X, Pourcentage: %%\n", 
-           "Jean Dupont", 30, 'J', 75001, -42, (void*)0x7ffee4b182a0, 255, 255, 0);
-	ft_printf("Nom: %s, Âge: %d, Initiale: %c, Code Postal: %u, ID: %i, Adresse: %p, Hex: %x, Hex Maj: %X, Pourcentage: %%\n", 
-           "Jean Dupont", 30, 'J', 75001, -42, (void*)0x7ffee4b182a0, 255, 255, 0);
-	return (0);
-}*/

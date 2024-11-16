@@ -28,4 +28,9 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all clean fclean re
+git :
+	git add .
+	git commit -m "auto update"
+	git push
+
+.PHONY : all clean fclean re git
