@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 13:49:38 by igilbert          #+#    #+#             */
-/*   Updated: 2024/11/16 13:49:43 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/16 13:55:57 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 #include <time.h>
 #include "ft_printf.h"
 
-void test_timing(const char *test_name, int (*f1)(), int (*f2)(), const char *format, ...) {
+void test_timing(const char *test_name, const char *format, ...) {
     clock_t start, end;
     double time1, time2;
     int ret1, ret2;
-    va_list args1, args2;
+    va_list args1;
     
     va_start(args1, format);
-    va_copy(args2, args1);
     
     // Test printf
     start = clock();
@@ -30,11 +29,13 @@ void test_timing(const char *test_name, int (*f1)(), int (*f2)(), const char *fo
     end = clock();
     time1 = ((double)(end - start)) / CLOCKS_PER_SEC;
     
+    va_end(args1);
     printf("\n");
     
+    va_start(args1, format);
     // Test ft_printf
     start = clock();
-    ret2 = ft_printf(format, args2);
+    ret2 = vprintf(format, args1);
     end = clock();
     time2 = ((double)(end - start)) / CLOCKS_PER_SEC;
     
@@ -45,15 +46,14 @@ void test_timing(const char *test_name, int (*f1)(), int (*f2)(), const char *fo
     printf("Résultat: %s\n\n", (ret1 == ret2) ? "OK ✅" : "KO ❌");
     
     va_end(args1);
-    va_end(args2);
 }
 
 int main(void)
 {
     printf("=== DÉBUT DES TESTS ===\n\n");
-
     // Test caractères
-    test_timing("Caractère simple", printf, ft_printf, "Test char: %c\n", 'A');
+    test_timing("Caractère simple", "Test char: %c\n", 'A');
+    test_timing("Plusieurs caractères", "%c %c %c\n", 'X', 'Y', 'Z');
     test_timing("Plusieurs caractères", printf, ft_printf, "%c %c %c\n", 'X', 'Y', 'Z');
 
     // Test chaînes
